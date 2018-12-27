@@ -1,0 +1,7 @@
+../../assets/objs/buddha.obj
+../../assets/objs/bunny.obj
+../../assets/objs/dragon.obj
+../../assets/objs/iscv2.obj
+../../assets/objs/sponza.obj
+../../assets/objs/sponza_tri.obj
+../../assets/objs/triangle.obj
