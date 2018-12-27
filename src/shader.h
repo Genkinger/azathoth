@@ -1,11 +1,6 @@
 #pragma once
-#include <GL/glew.h>
-#include <fstream>
-#include <glm/glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <string>
-#include <vector>
-#include "log.h"
+#include "common.h"
+
 
 class Shader {
 private:

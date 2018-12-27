@@ -1,8 +1,13 @@
 #pragma once
-
+#include <string>
+#include <fstream>
+#include <vector>
+#include <glm/glm.hpp>
+#include <glm/gtx/transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 #include <GL/glew.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <inttypes.h>
 #include <memory.h>
-#include "log.h"
+#include "glcall.h"

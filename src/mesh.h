@@ -1,14 +1,10 @@
 #pragma once
-#include <string>
-#include <GL/glew.h>
-#include <vector>
-#include <fstream>
-#include "log.h"
+#include "common.h"
 #include "vertex_array.h"
 #include "vertex_buffer.h"
 #include "transform.h"
-#include "az_aps.h"
 #include "texture.h"
+#include "aps.h"
 
 struct mesh_t
 {

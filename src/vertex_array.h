@@ -1,6 +1,7 @@
 #pragma once
+#include "common.h"
 #include "gl_bindable.h"
-#include "log.h"
+
 
 
 class VertexArray : public GLBindable
