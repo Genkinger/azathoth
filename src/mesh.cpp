@@ -1,42 +1,34 @@
 #include "mesh.h"
 #include <unistd.h>
 
-Mesh::Mesh(const std::string& meshPath) : m_VAO(), m_VBO(new VertexBuffer())
+mesh_t az_mesh_load_aps1(const char* path)
 {
+    mesh_t mesh;
 
-    m_APS1 = az_aps1_load(meshPath.c_str());
-    printf("MAGIC: %.*s, Size: %d\n",4,m_APS1->header.magic,m_APS1->header.num_vertices);
+    mesh.vbo = new VertexBuffer();
+    mesh.aps1 = az_aps1_load(path);
 
-    m_VAO.Bind();
-    m_VBO->Bind();
+    mesh.vao.Bind();
+    mesh.vbo->Bind();
     
-    m_VBO->Data(m_APS1->header.num_vertices * (3+2+3) * sizeof(float), m_APS1->data, GL_STATIC_DRAW);
+    mesh.vbo->Data(mesh.aps1->header.num_vertices * (3+2+3) * sizeof(float), mesh.aps1->data, GL_STATIC_DRAW);
     
-    m_VAO.EnableAttribArray(0);
-    m_VAO.EnableAttribArray(1);
-    m_VAO.EnableAttribArray(2);
+    mesh.vao.EnableAttribArray(0);
+    mesh.vao.EnableAttribArray(1);
+    mesh.vao.EnableAttribArray(2);
     
     //LAYOUT
     int stride = sizeof(float) * (3 + 2 + 3);
-    m_VAO.AttribPointer(0,3,GL_FLOAT,GL_FALSE,stride,0);//Positions
-    m_VAO.AttribPointer(1,2,GL_FLOAT,GL_FALSE,stride,(void*)(3 * sizeof(float))); //UVs
-    m_VAO.AttribPointer(2,3,GL_FLOAT,GL_FALSE,stride,(void*)(5 * sizeof(float))); //Normals
+    mesh.vao.AttribPointer(0,3,GL_FLOAT,GL_FALSE,stride,0);//Positions
+    mesh.vao.AttribPointer(1,2,GL_FLOAT,GL_FALSE,stride,(void*)(3 * sizeof(float))); //UVs
+    mesh.vao.AttribPointer(2,3,GL_FLOAT,GL_FALSE,stride,(void*)(5 * sizeof(float))); //Normals
     
-    m_Count = m_APS1->header.num_vertices * (3 + 2 + 3);
+    mesh.count = mesh.aps1->header.num_vertices * (3 + 2 + 3);
+    return mesh;
 }
 
-Mesh::~Mesh()
+void az_mesh_free(mesh_t *mesh)
 {
-    delete m_VBO;
-    az_aps1_free(m_APS1);
-}
-
-void Mesh::Bind()
-{
-    m_VAO.Bind();
-}
-
-void Mesh::Unbind()
-{
-    m_VAO.Unbind();
+    delete mesh->vbo;
+    az_aps1_free(mesh->aps1);
 }

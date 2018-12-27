@@ -3,12 +3,9 @@
 #include "mesh.h"
 
 
-class Scene
+struct Scene
 {
-    public:
-        Scene();
-        ~Scene();
-        void AddMesh(Mesh& mesh);
-    private:
-        std::vector<Mesh> m_Meshes;
+        void AddMesh(mesh_t* mesh, transform_t transform);
+        void AddMesh(mesh_t* mesh);
+        std::vector<mesh_t*> meshes;
 };

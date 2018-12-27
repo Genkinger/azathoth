@@ -31,8 +31,20 @@
 *.out
 *.app
 
+# Meshes
 *.aps1
+*.aps2
+*.obj
+*.mtl
 
+#vscode folder
 .vscode
 
+# build folder
 build
+
+# Media
+*.png
+*.jpeg
+*.jpg
+*.ff

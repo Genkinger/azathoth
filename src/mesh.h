@@ -8,25 +8,22 @@
 #include "vertex_buffer.h"
 #include "transform.h"
 #include "az_aps.h"
+#include "texture.h"
 
-class Mesh
+struct mesh_t
 {
-    public:
-        Mesh(const std::string& meshPath);
-        ~Mesh();
-        void Bind();
-        void Unbind();
-        int  Count() { return m_Count; } 
-        Transform& GetTransform() { return m_Transform; }
-    private:
-        GLuint m_ID;
-        VertexBuffer *m_VBO;
-        VertexArray m_VAO;
-        Transform m_Transform;
-        int m_Count;
-        aps1_t *m_APS1;
-
+    texture_t texture;
+    VertexBuffer *vbo;
+    VertexArray vao;
+    transform_t transform;
+    int count;
+    aps1_t *aps1;
+    aps2_t *aps2;
 };
+
+
+mesh_t az_mesh_load_aps1(const char* path);
+void az_mesh_free(mesh_t *mesh);
 
 
 
