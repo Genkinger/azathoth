@@ -6,7 +6,7 @@ farbfeld_t *az_farbfeld_load(const char* path)
     farbfeld_t *farbfeld = (farbfeld_t*)malloc(sizeof(farbfeld_t));
     
     FILE *file = fopen(path,"rb");
-    fread(&farbfeld->header,sizeof(farbfeld_header),1,file);
+    fread(&farbfeld->header,sizeof(farbfeld_header_t),1,file);
     
     farbfeld->header.width =     ntohl(farbfeld->header.width);
     farbfeld->header.height =    ntohl(farbfeld->header.height);

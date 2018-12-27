@@ -7,7 +7,7 @@ aps1_t *az_aps1_load(const char* path)
     aps1_t *aps1 = (aps1_t*)malloc(sizeof(aps1_t));
     fread(&aps1->header,sizeof(aps1_header_t),1,file);
 
-    if(strncmp((char*)aps1->header.magic,"APS1",4)){
+    if(strncmp((char*)aps1->header.magic,APS1_MAGIC,4)){
         printf("[%s]: Invalid Magic Number (Not a valid ASP1 file)!\n", __func__);
         return NULL;
     }

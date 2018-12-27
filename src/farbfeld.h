@@ -2,7 +2,7 @@
 #include "common.h"
 #include <arpa/inet.h>
 
-struct farbfeld_header
+struct farbfeld_header_t
 {
     int8_t      magic[8];
     uint32_t     width;
@@ -11,7 +11,7 @@ struct farbfeld_header
 
 struct farbfeld_t
 {
-    farbfeld_header header;
+    farbfeld_header_t header;
     int16_t         *data;
 
 };

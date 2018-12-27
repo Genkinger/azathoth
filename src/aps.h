@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define APS1_MAGIC  ('A' << 24 || 'P' << 16 || 'S' << 8 || '1')
-#define APS2_MAGIC  ('A' << 24 || 'P' << 16 || 'S' << 8 || '2')
+#define APS1_MAGIC  "APS1"
+#define APS2_MAGIC  "APS2"
 
 
 struct aps1_header_t
