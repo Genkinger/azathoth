@@ -2,7 +2,7 @@
 
 //PARTIALLY FINISHED
 
-material_info_t az_ams1_material_load(const char* path)
+material_lib_t az_ams1_material_load(const char* path)
 {
     ams1_t ams1;
     FILE *file = fopen(path,"rb");
@@ -20,7 +20,7 @@ material_info_t az_ams1_material_load(const char* path)
     }
 
 
-    material_info_t material;
+    material_lib_t material;
     material.num_materials = ams1.header.num_materials;
     material.materials = az_internal_ams1_material_texture_load(&ams1);
 
@@ -49,9 +49,9 @@ material_t *az_internal_ams1_material_texture_load(ams1_t *ams1){
             decal = az_texture_farbfeld_load(ams1->materials[i].decal);
         
         strncpy(material[i].name,ams1->materials[i].name,64);
-        material[i].ka = ams1->materials[i].ka;
-        material[i].kd = ams1->materials[i].kd;
-        material[i].ks = ams1->materials[i].ks;
+        memcpy(material[i].ka, ams1->materials[i].ka, 3);
+        memcpy(material[i].kd, ams1->materials[i].kd, 3);
+        memcpy(material[i].ks, ams1->materials[i].ks, 3);
         material[i].ns = ams1->materials[i].ns;
         material[i].tr = ams1->materials[i].tr;
         material[i].illum = ams1->materials[i].illum;

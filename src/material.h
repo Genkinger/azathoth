@@ -8,9 +8,9 @@
 struct material_t
 {
     char        name[64];
-    glm::vec3   ka;         //ambient
-    glm::vec3   kd;         //diffuse
-    glm::vec3   ks;         //specular
+    float       ka[3];      //ambient
+    float       kd[3];      //diffuse
+    float       ks[3];      //specular
     float       ns;         //specular exponent (0 - 10)
     float       tr;         //transparency ( 1-d )
     int         illum;      //illumination model
@@ -27,9 +27,9 @@ struct material_t
 struct ams1_material_t
 {
     char        name[64];    
-    glm::vec3   ka;         //ambient
-    glm::vec3   kd;         //diffuse
-    glm::vec3   ks;         //specular
+    float       ka[3];      //ambient
+    float       kd[3];      //diffuse
+    float       ks[3];      //specular
     float       ns;         //specular exponent (0 - 10)
     float       tr;         //transparency ( 1-d )
     int         illum;      //illumination model
@@ -54,12 +54,12 @@ struct ams1_t
     ams1_material_t  *materials;
 };
 
-struct material_info_t
+struct material_lib_t
 {
     int32_t num_materials;
     material_t *materials;
 };
 
-material_info_t az_ams1_material_load(const char* path);
+material_lib_t az_ams1_material_load(const char* path);
 material_t *az_internal_ams1_material_texture_load(ams1_t *ams1);
 void        az_ams1_material_free(material_t *materials);

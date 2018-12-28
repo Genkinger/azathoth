@@ -21,24 +21,51 @@ struct aps1_t
 };
 
 
+
+
+
+
+
+struct aps2_face_t
+{
+    int32_t v_indices[3];
+    int32_t vn_indices[3];
+    int32_t vt_indices[3];
+};
+
+struct aps2_group_header_t
+{
+    char name[64];
+    char material[64];
+    int32_t num_faces;
+};
+
+struct aps2_group_t
+{
+    aps2_group_header_t header;
+    aps2_face_t *faces;
+};
+
 struct aps2_header_t
 {
     int8_t      magic[4];       // EMF2_MAGIC "APS2"
     
-    int32_t     num_vertices;
-    int32_t     num_st;
-    int32_t     num_normals;
-    int32_t     num_tris;
+    int32_t     num_groups;
+    int32_t     num_v;
+    int32_t     num_vn;
+    int32_t     num_vt;
 
-    int32_t     ofs_vertices;
-    int32_t     ofs_st;
-    int32_t     ofs_normals;
-    int32_t     ofs_tris;
+    int32_t     ofs_groups;
 
+    char        mtllib[64];
 };
 
 struct aps2_t {
-    aps2_header_t    header;
+    aps2_header_t   header;
+    float           *v;
+    float           *vn;
+    float           *vt;
+    aps2_group_t    *groups;
 };
 
 

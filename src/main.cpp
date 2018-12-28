@@ -16,12 +16,12 @@ int main(int argc, char** argv)
 	Input input(window);
 
 	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
-	mesh_t a = az_mesh_load_aps1(argv[1]);
+	mesh_t a = az_mesh_load_aps2(argv[1],argv[2]);
 	
-	material_info_t material = az_ams1_material_load("sponza.ams1");
+	material_lib_t material = az_ams1_material_load("sponza.ams1");
 	printf("Material: %d \n",material.num_materials);
 
-	a.texture = az_texture_farbfeld_load("../assets/materials/textures/default.ff");
+	//a.texture = az_texture_farbfeld_load("../assets/materials/textures/default.ff");
 	Camera cam(input, float(W)/H);
 	
 	float angle = 0.f;

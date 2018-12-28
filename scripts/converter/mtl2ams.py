@@ -53,8 +53,7 @@ class MaterialParser():
     def parse_line(self,line):
         line = line.strip()
         if line.startswith('newmtl '):
-            self.finalize_current_mtl()
-            self.current_mtl = Material(line.split(' ')[-1])
+            self.finalize_current_mtl(line)
         elif line.startswith('Ka '):
             parts = line.split(' ')[1:]
             self.current_mtl.ka = [float(parts[0]),float(parts[1]),float(parts[2])]
@@ -86,12 +85,14 @@ class MaterialParser():
             self.current_mtl.map_disp = self.convert_to_farbfeld(line.split(' ')[-1])
         elif line.startswith('decal '):
             self.current_mtl.decal = self.convert_to_farbfeld(line.split(' ')[-1])
-        
-    def finalize_current_mtl(self):
+        self.finalize_current_mtl('')
+    
+    def finalize_current_mtl(self, line):
         if self.current_mtl.name != '':
             self.current_mtl.finalize()
             self.materials.append(self.current_mtl)
-        
+        self.current_mtl = Material(line.split(' ')[-1])
+
     def write_to_ams1(self, outpath):
         header_fmt = 'bbbbi'    
         data = struct.pack(header_fmt,*AMS1_MAGIC,len(self.materials))
