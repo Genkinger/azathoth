@@ -8,18 +8,18 @@
 
 struct mesh_t
 {
-    material_t material;
-    VertexBuffer *vbo;
-    VertexArray vao;
-    transform_t transform;
-    int count;
-    aps1_t *aps1;
-    aps2_t *aps2;
+    char            name[64];
+    material_t      material;
+    VertexBuffer    *vbo;
+    VertexArray     vao;
+    transform_t     transform;
+    int             count;
+    aps1_t          *aps1;
 };
 
 
 mesh_t az_mesh_load_aps1(const char* path);
-mesh_t az_mesh_load_aps2(const char* path, const char* name);
+mesh_t az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group);
 
 void az_mesh_free(mesh_t *mesh);
 

@@ -2,27 +2,15 @@
 
 //PARTIALLY FINISHED
 
-material_lib_t az_ams1_material_load(const char* path)
+material_lib_t *az_material_lib_ams1_load(const char* path)
 {
-    ams1_t ams1;
-    FILE *file = fopen(path,"rb");
-    fread(&ams1.header,sizeof(ams1_header_t),1,file);
-    if(memcmp(AMS1_MAGIC,ams1.header.magic,strlen(AMS1_MAGIC)))
-    {
-        printf("[%s]: Invalid magic number (not a AMS1 file)...\n",__func__);
-        return {-1,NULL};
-    }
-    ams1.materials = (ams1_material_t*)malloc(sizeof(ams1_material_t) * ams1.header.num_materials);
-    
-    for(int i = 0; i < ams1.header.num_materials; i++)
-    {
-        fread(&ams1.materials[i],sizeof(ams1_material_t),1,file);
-    }
+    ams1_t* ams1;
+    ams1 = az_ams1_load(path);
 
-
-    material_lib_t material;
-    material.num_materials = ams1.header.num_materials;
-    material.materials = az_internal_ams1_material_texture_load(&ams1);
+    material_lib_t *material = (material_lib_t*)malloc(sizeof(material_lib_t));
+    material->num_materials = ams1->header.num_materials;
+    material->materials = az_internal_ams1_material_texture_load(ams1);
+    az_ams1_free(ams1);
 
     return material;
 }
@@ -62,15 +50,13 @@ material_t *az_internal_ams1_material_texture_load(ams1_t *ams1){
         material[i].map_bump = map_bump;
         material[i].map_disp = map_disp;
         material[i].decal = decal;
-
-        return material;
     }
-
 
     return material;
 }
 
-void az_ams1_material_free(material_t *materials)
+void az_material_lib_ams1_free(material_lib_t *mtllib)
 {
-    
+    free(mtllib->materials);
+    free(mtllib);
 }

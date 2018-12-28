@@ -1,13 +1,13 @@
 #include "scene.h"
 
 
-void Scene::AddMesh(mesh_t* mesh, transform_t transform)
+void Scene::AddModel(model_t* model, transform_t transform)
 {
-    mesh->transform = transform;
-    meshes.push_back(mesh);
+    //transform = transform;
+    models.push_back(model);
 }
 
-void Scene::AddMesh(mesh_t* mesh)
+void Scene::AddModel(model_t* model)
 {
-    meshes.push_back(mesh);
+    models.push_back(model);
 }

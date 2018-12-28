@@ -21,11 +21,6 @@ struct aps1_t
 };
 
 
-
-
-
-
-
 struct aps2_face_t
 {
     int32_t v_indices[3];
@@ -68,9 +63,9 @@ struct aps2_t {
 
 
 aps1_t   *az_aps1_load(const char* path);
-void    az_aps1_free(aps1_t *emf);
+void    az_aps1_free(aps1_t *aps1);
 
 
 aps2_t  *az_aps2_load(const char* path);
-void    az_aps2_free(aps2_t *emf2);
+void    az_aps2_free(aps2_t *aps2);
 

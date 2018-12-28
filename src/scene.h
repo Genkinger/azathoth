@@ -1,11 +1,11 @@
 #pragma once
 #include <vector>
-#include "mesh.h"
+#include "model.h"
 
 
 struct Scene
 {
-        void AddMesh(mesh_t* mesh, transform_t transform);
-        void AddMesh(mesh_t* mesh);
-        std::vector<mesh_t*> meshes;
+        void AddModel(model_t* model, transform_t transform);
+        void AddModel(model_t* model);
+        std::vector<model_t*> models;
 };

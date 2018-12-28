@@ -4,7 +4,7 @@
 #include "texture.h"
 
 #include "material.h"
-
+#include "model.h"
 
 #define W 800
 #define H 600
@@ -16,12 +16,8 @@ int main(int argc, char** argv)
 	Input input(window);
 
 	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
-	mesh_t a = az_mesh_load_aps2(argv[1],argv[2]);
-	
-	//material_lib_t material = az_ams1_material_load("sponza.ams1");
-	//printf("Material: %d \n",material.num_materials);
+	model_t *a = az_model_aps2_load(argv[1]);
 
-	//a.texture = az_texture_farbfeld_load("../assets/materials/textures/default.ff");
 	Camera cam(input, float(W)/H);
 	
 	float angle = 0.f;
@@ -31,13 +27,13 @@ int main(int argc, char** argv)
 	glCullFace(GL_BACK);
 
 	Scene scene;
-	scene.AddMesh(&a);
+	scene.AddModel(a);
 	
 	Renderer renderer = Renderer();
 
 	while(!window.ShouldClose())
 	{
-		a.transform.model = glm::translate(glm::vec3(0,0,5)) * glm::rotate(glm::radians(angle),glm::vec3(0,1,0));
+		//a.transform.model = glm::translate(glm::vec3(0,0,5)) * glm::rotate(glm::radians(angle),glm::vec3(0,1,1));
 		
 		angle += 0.05f;
 		
