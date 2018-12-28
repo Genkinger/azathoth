@@ -49,6 +49,7 @@ class MaterialParser():
         with open(self.path,"r") as mtllib:
             for line in mtllib:
                 self.parse_line(line)
+            self.finalize_current_mtl('')
     
     def parse_line(self,line):
         line = line.strip()
@@ -85,7 +86,6 @@ class MaterialParser():
             self.current_mtl.map_disp = self.convert_to_farbfeld(line.split(' ')[-1])
         elif line.startswith('decal '):
             self.current_mtl.decal = self.convert_to_farbfeld(line.split(' ')[-1])
-        self.finalize_current_mtl('')
     
     def finalize_current_mtl(self, line):
         if self.current_mtl.name != '':

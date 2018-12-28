@@ -18,8 +18,8 @@ int main(int argc, char** argv)
 	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
 	mesh_t a = az_mesh_load_aps2(argv[1],argv[2]);
 	
-	material_lib_t material = az_ams1_material_load("sponza.ams1");
-	printf("Material: %d \n",material.num_materials);
+	//material_lib_t material = az_ams1_material_load("sponza.ams1");
+	//printf("Material: %d \n",material.num_materials);
 
 	//a.texture = az_texture_farbfeld_load("../assets/materials/textures/default.ff");
 	Camera cam(input, float(W)/H);

@@ -57,6 +57,10 @@ aps2_t *az_aps2_load(const char* path)
         fread(&group.header,sizeof(aps2_group_header_t),1,file);
         group.faces = (aps2_face_t*)malloc(sizeof(aps2_face_t)*group.header.num_faces);
         fread(group.faces,sizeof(aps2_face_t)*group.header.num_faces,1,file);
+        for(int j = 0; j < group.header.num_faces; j++)
+        {
+            printf("Group Faces: vn %d %d %d\n",group.faces[j].vn_indices[0],group.faces[j].vn_indices[1],group.faces[j].vn_indices[2]);
+        }
         memcpy(&aps2->groups[i],&group,sizeof(aps2_group_t));
     }
 

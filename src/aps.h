@@ -55,8 +55,6 @@ struct aps2_header_t
     int32_t     num_vn;
     int32_t     num_vt;
 
-    int32_t     ofs_groups;
-
     char        mtllib[64];
 };
 

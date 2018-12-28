@@ -2,8 +2,7 @@
 
 import sys
 import struct
-import numpy as np
-
+from mtl2ams import * 
 
 APS2_MAGIC = b'APS2'
 
@@ -124,32 +123,34 @@ class OBJParser():
         self.current_group = OBJGroup(line.split(' ')[-1],self)
     
     def write_as_aps2(self,outpath):
-        aps2_header_fmt = 'bbbbiiiii'+ 'b'*64
+        mtlparser = MaterialParser(self.path.rsplit('/',1)[0] + '/' + self.mtllib)
+        mtlparser.parse()
+        mtlparser.write_to_ams1(self.path.rsplit('/',1)[0] + '/' + self.mtllib.split('.')[0] + '.ams1')
+        
+        aps2_header_fmt = 'bbbbiiii'+ 'b'*64
         aps2_group_header_fmt = 'b'*64 + 'b'*64 + 'i'
-        aps2_face_fmt = 'f'*(3+3+3)
+        aps2_face_fmt = 'i'*(3+3+3)
 
         num_groups = len(self.groups)
         num_v = len(self.v)
         num_vn = len(self.vn)
         num_vt = len(self.vt)
-        ofs_groups = int((num_v + num_vn + num_vt) * 4)
-        mtllib = bytes(self.mtllib.ljust(64,'\x00')[:64],encoding="ascii")
 
-        data = struct.pack(aps2_header_fmt,*APS2_MAGIC,num_groups,num_v//3,num_vn//3,num_vt//2,ofs_groups,*mtllib)
+        mtllib = bytes((self.mtllib.split('.')[0] + '.ams1').ljust(64,'\x00')[:64],encoding="ascii")
+
+        data = struct.pack(aps2_header_fmt,*APS2_MAGIC,num_groups,num_v//3,num_vn//3,num_vt//2,*mtllib)
 
         data += struct.pack('f'*num_v,*self.v)
         data += struct.pack('f'*num_vn,*self.vn)
         data += struct.pack('f'*num_vt,*self.vt)
-        print(len(self.groups))
+        
         for i,group in enumerate(self.groups):
-            print(len(group.faces))
-            print(i)
             name = bytes(group.name.ljust(64,'\x00')[:64],encoding='ascii')
             material = bytes(group.material.ljust(64,'\x00')[:64],encoding='ascii')
             num_faces = len(group.faces)
             data += struct.pack(aps2_group_header_fmt,*name,*material,num_faces)
             for face in group.faces:
-                data += struct.pack(aps2_face_fmt,face[0][0],face[1][0],face[2][0],face[0][1],face[1][1],face[2][1],face[0][2],face[1][2],face[2][2])
+                data += struct.pack(aps2_face_fmt,face[0][0],face[1][0],face[2][0],face[0][2],face[1][2],face[2][2],face[0][1],face[1][1],face[2][1])
     
         with open(outpath,'wb') as outfile:
             outfile.write(data)

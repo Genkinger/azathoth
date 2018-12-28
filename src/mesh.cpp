@@ -56,40 +56,41 @@ mesh_t az_mesh_load_aps2(const char* path,const char* name)
         }
     }
 
-    float *data = (float*)malloc(sizeof(float)*group->header.num_faces*9*3*(3+2+3));
+    int size = sizeof(float)*group->header.num_faces*9*3*(3+2+3);
+    float *data = (float*)malloc(size);
 
     for(int i = 0; i < group->header.num_faces; i++)
     {   
         data[i * 3 * (3+2+3) + 0 ] = mesh.aps2->v[group->faces[i].v_indices[0] * 3 + 0];
         data[i * 3 * (3+2+3) + 1 ] = mesh.aps2->v[group->faces[i].v_indices[0] * 3 + 1];
         data[i * 3 * (3+2+3) + 2 ] = mesh.aps2->v[group->faces[i].v_indices[0] * 3 + 2];
+        
+        data[i * 3 * (3+2+3) + 3  ] = mesh.aps2->vt[group->faces[i].vt_indices[0] * 2 + 0];
+        data[i * 3 * (3+2+3) + 4 ] = mesh.aps2->vt[group->faces[i].vt_indices[0] * 2 + 1];
+        
+        data[i * 3 * (3+2+3) + 5 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 0];
+        data[i * 3 * (3+2+3) + 6 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 1];
+        data[i * 3 * (3+2+3) + 7 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 2];
 
-        data[i * 3 * (3+2+3) + 3 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 0];
-        data[i * 3 * (3+2+3) + 4 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 1];
-        data[i * 3 * (3+2+3) + 5 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 2];
 
-        data[i * 3 * (3+2+3) + 6 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 0];
-        data[i * 3 * (3+2+3) + 7 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 1];
-        data[i * 3 * (3+2+3) + 8 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 2];
-
-
-        data[i * 3 * (3+2+3) + 9  ] = mesh.aps2->vt[group->faces[i].vt_indices[0] * 2 + 0];
-        data[i * 3 * (3+2+3) + 10 ] = mesh.aps2->vt[group->faces[i].vt_indices[0] * 2 + 1];
+        data[i * 3 * (3+2+3) + 8 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 0];
+        data[i * 3 * (3+2+3) + 9 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 1];
+        data[i * 3 * (3+2+3) + 10 ] = mesh.aps2->v[group->faces[i].v_indices[1] * 3 + 2];
 
         data[i * 3 * (3+2+3) + 11 ] = mesh.aps2->vt[group->faces[i].vt_indices[1] * 2 + 0];
         data[i * 3 * (3+2+3) + 12 ] = mesh.aps2->vt[group->faces[i].vt_indices[1] * 2 + 1];
 
-        data[i * 3 * (3+2+3) + 13 ] = mesh.aps2->vt[group->faces[i].vt_indices[2] * 2 + 0];
-        data[i * 3 * (3+2+3) + 14 ] = mesh.aps2->vt[group->faces[i].vt_indices[2] * 2 + 1];
+        data[i * 3 * (3+2+3) + 13 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 0];
+        data[i * 3 * (3+2+3) + 14 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 1];
+        data[i * 3 * (3+2+3) + 15 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 2];
 
 
-        data[i * 3 * (3+2+3) + 15 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 0];
-        data[i * 3 * (3+2+3) + 16 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 1];
-        data[i * 3 * (3+2+3) + 17 ] = mesh.aps2->vn[group->faces[i].vn_indices[0] * 3 + 2];
+        data[i * 3 * (3+2+3) + 16 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 0];
+        data[i * 3 * (3+2+3) + 17 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 1];
+        data[i * 3 * (3+2+3) + 18 ] = mesh.aps2->v[group->faces[i].v_indices[2] * 3 + 2];
 
-        data[i * 3 * (3+2+3) + 18 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 0];
-        data[i * 3 * (3+2+3) + 19 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 1];
-        data[i * 3 * (3+2+3) + 20 ] = mesh.aps2->vn[group->faces[i].vn_indices[1] * 3 + 2];
+        data[i * 3 * (3+2+3) + 19 ] = mesh.aps2->vt[group->faces[i].vt_indices[2] * 2 + 0];
+        data[i * 3 * (3+2+3) + 20 ] = mesh.aps2->vt[group->faces[i].vt_indices[2] * 2 + 1];
 
         data[i * 3 * (3+2+3) + 21 ] = mesh.aps2->vn[group->faces[i].vn_indices[2] * 3 + 0];
         data[i * 3 * (3+2+3) + 22 ] = mesh.aps2->vn[group->faces[i].vn_indices[2] * 3 + 1];
@@ -100,7 +101,7 @@ mesh_t az_mesh_load_aps2(const char* path,const char* name)
     mesh.vao.Bind();
     mesh.vbo->Bind();
     
-    mesh.vbo->Data(mesh.aps1->header.num_vertices * (3+2+3) * sizeof(float), data, GL_STATIC_DRAW);
+    mesh.vbo->Data(size, data, GL_STATIC_DRAW);
     
     mesh.vao.EnableAttribArray(0);
     mesh.vao.EnableAttribArray(1);
