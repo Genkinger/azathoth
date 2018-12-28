@@ -11,7 +11,7 @@ farbfeld_t *az_farbfeld_load(const char* path)
     farbfeld->header.width =     ntohl(farbfeld->header.width);
     farbfeld->header.height =    ntohl(farbfeld->header.height);
 
-    if(memcmp("farbfeld",farbfeld->header.magic,strlen("farbfeld"))){
+    if(memcmp(FF_MAGIC,farbfeld->header.magic,strlen(FF_MAGIC))){
         printf("Invalid Magic Number ... (not a Farbfeld file)\n");
         return NULL;
     }

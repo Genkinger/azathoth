@@ -3,6 +3,9 @@
 #include "renderer.h"
 #include "texture.h"
 
+#include "material.h"
+
+
 #define W 800
 #define H 600
 
@@ -15,7 +18,10 @@ int main(int argc, char** argv)
 	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
 	mesh_t a = az_mesh_load_aps1(argv[1]);
 	
-	a.texture = az_texture_farbfeld_load("../assets/textures/default.ff");
+	material_info_t material = az_ams1_material_load("sponza.ams1");
+	printf("Material: %d \n",material.num_materials);
+
+	a.texture = az_texture_farbfeld_load("../assets/materials/textures/default.ff");
 	Camera cam(input, float(W)/H);
 	
 	float angle = 0.f;

@@ -2,6 +2,8 @@
 #include "common.h"
 #include <arpa/inet.h>
 
+#define FF_MAGIC "farbfeld"
+
 struct farbfeld_header_t
 {
     int8_t      magic[8];

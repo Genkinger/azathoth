@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 import struct
 import numpy as np
@@ -5,6 +7,7 @@ import numpy as np
 
 # Format: |vertex_count|vertex_data|
 # vertex_data: |v|vt|vn|...
+
 EMF_MAGIC = b'APS1'
 
 def calculate_normal_from_vertex_positions(v1,v2,v3):
@@ -76,7 +79,7 @@ def calculate_uvs_for_faces(faces):
 
 def write_aps1_to_file(filename, data):
     print("num_verts: ",len(data)//8)
-    s = struct.pack('bbbbi'+'f'*len(data),EMF_MAGIC[0],EMF_MAGIC[1],EMF_MAGIC[2],EMF_MAGIC[3],len(data)//8, *data)
+    s = struct.pack('bbbbi'+'f'*len(data),*EMF_MAGIC,len(data)//8, *data)
     with open(filename,'wb') as file:   
         file.write(s)
 

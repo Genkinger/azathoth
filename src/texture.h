@@ -3,15 +3,15 @@
 
 struct texture_t
 {
-    int32_t width;
-    int32_t height;
+    int32_t width = -1;
+    int32_t height = -1;
 
-    GLenum wrap_s;
-    GLenum wrap_t;
-    GLenum min_filter;
-    GLenum mag_filter;
+    GLenum wrap_s = GL_REPEAT;
+    GLenum wrap_t = GL_REPEAT;
+    GLenum min_filter = GL_NEAREST;
+    GLenum mag_filter = GL_NEAREST;
 
-    GLuint id;
+    GLuint id = 0;
 
 };
 
