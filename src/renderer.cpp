@@ -10,8 +10,8 @@ void Renderer::DrawScene(Scene &scene, Shader &shader, Camera& camera)
     for(model_t *model : scene.models)
     {
         for(int i = 0; i < model->num_meshes; i++){
-            mesh_t *m = &model->meshes[i];
-            m->vao.Bind();
+            mesh_t *m = model->meshes[i];
+            GLCall(glBindVertexArray(m->vao));
             shader.UniformMat4("Model",m->transform.model);
             shader.UniformInt("texture_sampler",0);
             shader.UniformMat4("Normal",glm::transpose(glm::inverse(m->transform.model)));

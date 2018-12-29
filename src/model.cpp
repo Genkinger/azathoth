@@ -8,7 +8,7 @@ model_t *az_model_aps2_load(const char* path)
     model->mtllib = mtllib;
 
     model->num_meshes = aps2->header.num_groups;
-    model->meshes = (mesh_t*)malloc(sizeof(mesh_t)*model->num_meshes);
+    model->meshes = (mesh_t**)malloc(sizeof(mesh_t*)*model->num_meshes);
     for(int i = 0; i < model->num_meshes; i++)
     {
         model->meshes[i] = az_mesh_load_from_aps2(aps2,&aps2->groups[i]);
@@ -16,7 +16,7 @@ model_t *az_model_aps2_load(const char* path)
         {
             if(!strcmp(model->mtllib->materials[j].name,aps2->groups[i].header.material))
             {
-                model->meshes[i].material = model->mtllib->materials[j];
+                model->meshes[i]->material = model->mtllib->materials[j];
             }            
         }
     }
@@ -40,7 +40,7 @@ model_t *az_model_aps1_load(const char* path)
 void az_model_free(model_t *model)
 {
     for(int i = 0; i < model->num_meshes; i++){
-        az_mesh_free(&model->meshes[i]);
+        az_mesh_free(model->meshes[i]);
     }
     free(model->meshes);
     az_material_lib_ams1_free(model->mtllib);

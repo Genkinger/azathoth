@@ -7,7 +7,7 @@ struct model_t
 {
     int32_t num_meshes;
     material_lib_t *mtllib;
-    mesh_t *meshes;
+    mesh_t **meshes;
 };
 
 

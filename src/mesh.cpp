@@ -1,7 +1,7 @@
 #include "mesh.h"
 #include <unistd.h>
 
-mesh_t az_mesh_load_aps1(const char* path)
+/*mesh_t az_mesh_load_aps1(const char* path)
 {
     mesh_t mesh;
 
@@ -26,12 +26,12 @@ mesh_t az_mesh_load_aps1(const char* path)
     mesh.count = mesh.aps1->header.num_vertices * (3 + 2 + 3);
     return mesh;
 }
-
-mesh_t az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group)
+*/
+mesh_t *az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group)
 {
-    mesh_t mesh;
-
-    mesh.vbo = new VertexBuffer();
+    mesh_t *mesh = (mesh_t*)malloc(sizeof(mesh_t));
+    GLCall(glGenBuffers(1,&mesh->vbo));
+    GLCall(glGenVertexArrays(1,&mesh->vao));
 
     int size = sizeof(float)*group->header.num_faces*9*3*(3+2+3);
     float *data = (float*)malloc(size);
@@ -75,26 +75,26 @@ mesh_t az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group)
     }
 
 
-    mesh.vao.Bind();
-    mesh.vbo->Bind();
+    GLCall(glBindVertexArray(mesh->vao));
+    GLCall(glBindBuffer(GL_ARRAY_BUFFER,mesh->vbo));
+    GLCall(glBufferData(GL_ARRAY_BUFFER,size,data,GL_STATIC_DRAW));
+    GLCall(glEnableVertexAttribArray(0));
+    GLCall(glEnableVertexAttribArray(1));
+    GLCall(glEnableVertexAttribArray(2));
     
-    mesh.vbo->Data(size, data, GL_STATIC_DRAW);
-    
-    mesh.vao.EnableAttribArray(0);
-    mesh.vao.EnableAttribArray(1);
-    mesh.vao.EnableAttribArray(2);
-    
+
     //LAYOUT
     int stride = sizeof(float) * (3 + 2 + 3);
-    mesh.vao.AttribPointer(0,3,GL_FLOAT,GL_FALSE,stride,0);//Positions
-    mesh.vao.AttribPointer(1,2,GL_FLOAT,GL_FALSE,stride,(void*)(3 * sizeof(float))); //UVs
-    mesh.vao.AttribPointer(2,3,GL_FLOAT,GL_FALSE,stride,(void*)(5 * sizeof(float))); //Normals
-    
-    mesh.count = group->header.num_faces * (3 + 2 + 3);
+    GLCall(glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,stride,0));
+    GLCall(glVertexAttribPointer(1,2,GL_FLOAT,GL_FALSE,stride,(void*)(3 * sizeof(float))));
+    GLCall(glVertexAttribPointer(2,3,GL_FLOAT,GL_FALSE,stride,(void*)(5 * sizeof(float))));    
+    mesh->count = group->header.num_faces * (3 + 2 + 3);
+    mesh->transform.model = glm::mat4(1);
+
     return mesh;
 }
 
 void az_mesh_free(mesh_t *mesh)
 {
-    delete mesh->vbo;
+    
 }
