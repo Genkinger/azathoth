@@ -46,6 +46,12 @@ void Camera::Update()
     if(m_Input.Keys[GLFW_KEY_D]){
         position += right * speed;
     }
+    if(m_Input.Keys[GLFW_KEY_SPACE]){
+        position += world_up * speed;
+    }
+    if(m_Input.Keys[GLFW_KEY_LEFT_CONTROL]){
+        position -= world_up * speed;
+    }
 
     view = glm::lookAt(position, position + direction, up);
 }

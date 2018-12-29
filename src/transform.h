@@ -2,7 +2,6 @@
 #include <glm/glm.hpp>
 
 
-
 struct transform_t
 {
     glm::vec3 translation = glm::vec3(0,0,0);

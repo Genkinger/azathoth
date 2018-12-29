@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 
 	while(!window.ShouldClose())
 	{
-		//a.transform.model = glm::translate(glm::vec3(0,0,5)) * glm::rotate(glm::radians(angle),glm::vec3(0,1,1));
+		a->meshes[0]->transform.model = glm::translate(glm::vec3(4,0,0)) * glm::rotate(glm::radians(angle),glm::vec3(0,1,0));
 		
 		angle += 0.05f;
 		

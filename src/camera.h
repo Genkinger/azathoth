@@ -26,7 +26,7 @@ struct Camera
         float far = 100.f;
 
         float factor = 0.0005f;
-        float speed = 0.1f;
+        float speed = 0.01f;
 
         Camera(Input& input, float aspect);
         void Update();

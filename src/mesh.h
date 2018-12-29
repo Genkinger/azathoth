@@ -1,7 +1,5 @@
 #pragma once
 #include "common.h"
-#include "vertex_array.h"
-#include "vertex_buffer.h"
 #include "transform.h"
 #include "aps.h"
 #include "material.h"

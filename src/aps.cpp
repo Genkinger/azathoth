@@ -64,6 +64,24 @@ aps2_t *az_aps2_load(const char* path)
     return aps2;
 }
 
+
+void az_aps2_write(const char* path, aps2_t *aps2)
+{
+    FILE *file = fopen(path,"wb");
+    fwrite(&aps2->header,sizeof(aps2_header_t),1,file);
+    fwrite(aps2->v,sizeof(float)*3,aps2->header.num_v,file);
+    fwrite(aps2->vn,sizeof(float)*3,aps2->header.num_vn,file);
+    fwrite(aps2->vt,sizeof(float)*2,aps2->header.num_vt,file);
+    for(int i = 0; i < aps2->header.num_groups; i++)
+    {
+        fwrite(&aps2->groups[i].header,sizeof(aps2_group_header_t),1,file);
+        fwrite(aps2->groups[i].faces,sizeof(aps2_face_t),aps2->groups[i].header.num_faces,file);
+    }
+
+    fclose(file);
+}   
+
+
 void az_aps2_free(aps2_t *aps2)
 {
     free(aps2->v);

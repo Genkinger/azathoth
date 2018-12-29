@@ -67,5 +67,6 @@ void    az_aps1_free(aps1_t *aps1);
 
 
 aps2_t  *az_aps2_load(const char* path);
+void    az_aps2_write(const char* path, aps2_t *aps2);
 void    az_aps2_free(aps2_t *aps2);
 
