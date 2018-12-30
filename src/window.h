@@ -9,7 +9,7 @@ class Window
 private:
 	GLFWwindow *m_WindowHandle;
 public:
-	Window(int width, int height, const std::string &title, bool vsync = false, int posx = 0 , int posy = 0);
+	Window(int width, int height, const std::string &title, bool fullscreen = false, bool vsync = false, int posx = 0 , int posy = 0);
 	void SwapBuffers();
 	double Update();
 	bool ShouldClose();

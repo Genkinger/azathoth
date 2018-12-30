@@ -17,7 +17,6 @@ int main(int argc, char** argv)
 
 	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
 	model_t *a = az_model_aps2_load(argv[1]);
-
 	Camera cam(input, float(W)/H);
 	
 	float angle = 0.f;
@@ -33,8 +32,6 @@ int main(int argc, char** argv)
 
 	while(!window.ShouldClose())
 	{
-		a->meshes[0]->transform.model = glm::translate(glm::vec3(4,0,0)) * glm::rotate(glm::radians(angle),glm::vec3(0,1,0));
-		
 		angle += 0.05f;
 		
 		cam.Update();

@@ -2,13 +2,13 @@
 
 model_t *az_model_aps2_load(const char* path)
 {
-    model_t *model = (model_t*)malloc(sizeof(model_t));
+    model_t *model = (model_t*)calloc(1,sizeof(model_t));
     aps2_t *aps2 = az_aps2_load(path);
     material_lib_t *mtllib = az_material_lib_ams1_load(aps2->header.mtllib);
     model->mtllib = mtllib;
 
     model->num_meshes = aps2->header.num_groups;
-    model->meshes = (mesh_t**)malloc(sizeof(mesh_t*)*model->num_meshes);
+    model->meshes = (mesh_t**)calloc(model->num_meshes,sizeof(mesh_t*));
     for(int i = 0; i < model->num_meshes; i++)
     {
         model->meshes[i] = az_mesh_load_from_aps2(aps2,&aps2->groups[i]);

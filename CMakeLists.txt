@@ -10,6 +10,9 @@ add_executable(${PROJECT_NAME} ${SOURCES_FULL})
 target_link_libraries(${PROJECT_NAME} glfw GLEW GL)
 
 #TOOLS
-file(GLOB_RECURSE SOURCES_OBJ2APS "tools/converter/obj2aps2/*.cpp")
+#file(GLOB_RECURSE SOURCES_OBJ2APS "tools/converter/obj2aps2/*.cpp")
+set(SOURCES_OBJ2APS tools/converter/obj2aps2/objparser.cpp tools/converter/obj2aps2/obj2aps.cpp tools/converter/strutils.cpp)
 add_executable(obj2aps ${SOURCES_OBJ2APS} src/aps.cpp)
-#target_link_libraries(obj2aps )
+
+set(SOURCES_MTL2AMS tools/converter/mtl2ams1/mtl2ams.cpp tools/converter/strutils.cpp)
+add_executable(mtl2ams ${SOURCES_MTL2AMS} src/ams.cpp)

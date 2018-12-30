@@ -8,6 +8,7 @@ uniform mat4 Model;
 uniform mat4 Normal;
 uniform mat4 View;
 uniform mat4 Projection;
+uniform mat4 MVP;
 
 out vec3 position;
 out float cosTheta;
@@ -17,10 +18,11 @@ out vec2 st;
 void main()
 {
     vec3 lightPosition = vec3(0,3,0);
-    vec4 pos = Model * vec4(vertex_position, 1);
+    vec4 vertex_pos = vec4(vertex_position,1);
+    vec4 pos = Model * vertex_pos;
     vec4 normal = Normal * vec4(vertex_normal,0);
-    st = vertex_uv;
-    gl_Position = Projection * View * pos;
+    st = vec2(vertex_uv.x,1-vertex_uv.y);
+    gl_Position = MVP * vertex_pos;
     position = vertex_position;
     cosTheta = clamp(dot(normalize(normal.xyz),(lightPosition-pos.xyz)),0,1);
     float len = length(lightPosition-pos.xyz);

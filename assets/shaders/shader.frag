@@ -6,10 +6,14 @@ out vec4 color;
 in float cosTheta;
 in float scale;
 in vec2 st;
-uniform sampler2D texture_sampler;
+
+uniform sampler2D diffuse;
+uniform sampler2D ambient;
+uniform sampler2D specular;
+uniform sampler2D bump;
 
 void main()
 {
-    vec4 col = texture(texture_sampler,st);
-    color = scale * cosTheta * col + col * 0.3;
+    vec4 col = texture(diffuse,st);
+    color = scale * cosTheta * col + texture(ambient,st);
 }

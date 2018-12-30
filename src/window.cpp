@@ -2,7 +2,7 @@
 
 
 
-Window::Window(int width, int height, const std::string &title, bool vsync, int posx, int posy)
+Window::Window(int width, int height, const std::string &title, bool fullscreen, bool vsync, int posx, int posy)
 {
 	if (!glfwInit()) {
 		//LOG
@@ -10,7 +10,8 @@ Window::Window(int width, int height, const std::string &title, bool vsync, int 
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	m_WindowHandle = glfwCreateWindow(width, height, title.c_str(), nullptr, nullptr);
+
+	m_WindowHandle = glfwCreateWindow(width, height, title.c_str(), fullscreen ? glfwGetPrimaryMonitor() : nullptr, nullptr);
 	glfwMakeContextCurrent(m_WindowHandle);
 	
 	if(vsync){

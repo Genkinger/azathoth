@@ -21,6 +21,18 @@ ams1_t *az_ams1_load(const char* path)
     return ams1;
 }
 
+void az_ams1_write(const char* path,ams1_t *ams1){
+    FILE *file = fopen(path,"wb");
+
+    fwrite(&ams1->header,sizeof(ams1_header_t),1,file);
+    for(int i = 0; i < ams1->header.num_materials; i++){
+        fwrite(&ams1->materials[i],sizeof(ams1_material_t),1,file);
+    }
+    
+    
+    fclose(file);
+}
+
 void az_ams1_free(ams1_t* ams1)
 {
     free(ams1->materials);

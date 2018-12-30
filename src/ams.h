@@ -2,7 +2,7 @@
 #include "common.h"
 
 #define AMS1_MAGIC "AMS1"
-#define AMS1_TEXTURE_NONE "NONE"
+#define AMS1_TEXTURE_NONE "\0"
 
 
 struct ams1_material_t
@@ -37,4 +37,5 @@ struct ams1_t
 
 
 ams1_t  *az_ams1_load(const char* path);
+void    az_ams1_write(const char* path,ams1_t *ams1);
 void    az_ams1_free(ams1_t* ams1);

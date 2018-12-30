@@ -29,12 +29,13 @@
 */
 mesh_t *az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group)
 {
-    mesh_t *mesh = (mesh_t*)malloc(sizeof(mesh_t));
+    mesh_t *mesh = (mesh_t*)calloc(1,sizeof(mesh_t));
+    strcpy(mesh->name,group->header.name);
     GLCall(glGenBuffers(1,&mesh->vbo));
     GLCall(glGenVertexArrays(1,&mesh->vao));
 
     int size = sizeof(float)*group->header.num_faces*9*3*(3+2+3);
-    float *data = (float*)malloc(size);
+    float *data = (float*)calloc(1,size);
 
     for(int i = 0; i < group->header.num_faces; i++)
     {   

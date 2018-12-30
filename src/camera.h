@@ -21,12 +21,12 @@ struct Camera
 
         glm::vec3 position = glm::vec3(0.f,5.f,0.f);
 
-        float fovy = 75.f;
+        float fovy = 80.f;
         float near = 1.f;
-        float far = 100.f;
+        float far = 5000.f;
 
-        float factor = 0.0005f;
-        float speed = 0.01f;
+        float factor = 0.005f;
+        float speed = 5.f;
 
         Camera(Input& input, float aspect);
         void Update();

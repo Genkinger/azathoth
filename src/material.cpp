@@ -16,25 +16,25 @@ material_lib_t *az_material_lib_ams1_load(const char* path)
 }
 
 material_t *az_internal_ams1_material_texture_load(ams1_t *ams1){
-    material_t *material = (material_t*)malloc(sizeof(material_t) * ams1->header.num_materials);
+    material_t *material = (material_t*)calloc(ams1->header.num_materials,sizeof(material_t));
     
     for(int i = 0; i < ams1->header.num_materials; i++){
         texture_t map_ka, map_kd, map_ks, map_ns, map_bump, map_disp, decal;
 
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_ka,strlen(AMS1_TEXTURE_NONE)))
-            map_ka = az_texture_farbfeld_load(ams1->materials[i].map_ka);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_kd,strlen(AMS1_TEXTURE_NONE)))
-            map_kd = az_texture_farbfeld_load(ams1->materials[i].map_kd);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_ks,strlen(AMS1_TEXTURE_NONE)))
-            map_ks = az_texture_farbfeld_load(ams1->materials[i].map_ks);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_ns,strlen(AMS1_TEXTURE_NONE)))
-            map_ns = az_texture_farbfeld_load(ams1->materials[i].map_ns);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_bump,strlen(AMS1_TEXTURE_NONE)))
-            map_bump = az_texture_farbfeld_load(ams1->materials[i].map_bump);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].map_disp,strlen(AMS1_TEXTURE_NONE)))
-            map_disp = az_texture_farbfeld_load(ams1->materials[i].map_disp);
-        if(strncmp(AMS1_TEXTURE_NONE,ams1->materials[i].decal,strlen(AMS1_TEXTURE_NONE)))
-            decal = az_texture_farbfeld_load(ams1->materials[i].decal);
+        if(ams1->materials[i].map_ka[0])
+            map_ka = az_texture_farbfeld_load(ams1->materials[i].map_ka,1);
+        if(ams1->materials[i].map_kd[0])
+            map_kd = az_texture_farbfeld_load(ams1->materials[i].map_kd,0);
+        if(ams1->materials[i].map_ks[0])
+            map_ks = az_texture_farbfeld_load(ams1->materials[i].map_ks,2);
+        if(ams1->materials[i].map_ns[0])
+            map_ns = az_texture_farbfeld_load(ams1->materials[i].map_ns,4);
+        if(ams1->materials[i].map_bump[0])
+            map_bump = az_texture_farbfeld_load(ams1->materials[i].map_bump,3);
+        if(ams1->materials[i].map_disp[0])
+            map_disp = az_texture_farbfeld_load(ams1->materials[i].map_disp,5);
+        if(ams1->materials[i].decal[0])
+            decal = az_texture_farbfeld_load(ams1->materials[i].decal,6);
         
         strncpy(material[i].name,ams1->materials[i].name,64);
         memcpy(material[i].ka, ams1->materials[i].ka, 3);
