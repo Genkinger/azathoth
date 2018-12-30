@@ -20,7 +20,7 @@ model_t *az_model_aps2_load(const char* path)
             }            
         }
     }
-    
+    model->transform.model = glm::mat4(1);
     return model;
 }
 

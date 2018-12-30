@@ -1,7 +1,6 @@
 #include "ams.h"
 
 
-
 ams1_t *az_ams1_load(const char* path)
 {
     ams1_t *ams1 = (ams1_t*)malloc(sizeof(ams1_t));

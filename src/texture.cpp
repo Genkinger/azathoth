@@ -6,8 +6,8 @@ texture_t az_texture_farbfeld_load(const char* path, GLuint index, GLuint wrap_s
     texture_t texture;
     texture.wrap_s = wrap_s;
     texture.wrap_t = wrap_t;
-    texture.min_filter = GL_NEAREST;
-    texture.mag_filter = GL_NEAREST;
+    texture.min_filter = GL_LINEAR_MIPMAP_LINEAR;
+    texture.mag_filter = GL_LINEAR;
     texture.index = index;
 
     GLCall(glGenTextures(1,&texture.id));

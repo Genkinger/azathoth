@@ -1,0 +1,115 @@
+\hypertarget{ams_8h}{}\section{/home/genkinger/devel/\+C/azathoth/inc/ams.h File Reference}
+\label{ams_8h}\index{/home/genkinger/devel/\+C/azathoth/inc/ams.\+h@{/home/genkinger/devel/\+C/azathoth/inc/ams.\+h}}
+
+
+definitions for the Azathoth Material Specification v1 (A\+M\+S1)  
+
+
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structams1__material__t}{ams1\+\_\+material\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structams1__header__t}{ams1\+\_\+header\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{ams_8h_a2ea0eee5dfdfa9bc2dd2b40c4812e6be}\label{ams_8h_a2ea0eee5dfdfa9bc2dd2b40c4812e6be}} 
+\#define {\bfseries A\+M\+S1\+\_\+\+M\+A\+G\+IC}~\char`\"{}A\+M\+S1\char`\"{}
+\item 
+\mbox{\Hypertarget{ams_8h_a1301d599292bb16096f64a01d0e59742}\label{ams_8h_a1301d599292bb16096f64a01d0e59742}} 
+\#define {\bfseries A\+M\+S1\+\_\+\+T\+E\+X\+T\+U\+R\+E\+\_\+\+N\+O\+NE}~\char`\"{}\textbackslash{}0\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} $\ast$ \mbox{\hyperlink{ams_8h_ad958b6e68e8945a7009a4116cc7a9205}{az\+\_\+ams1\+\_\+load}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em loads a ams1 file from disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ams_8h_aa8979409fae2a063db0ae02a8b8c9075}{az\+\_\+ams1\+\_\+write}} (const char $\ast$path, \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} $\ast$ams1)
+\begin{DoxyCompactList}\small\item\em writes a ams1 file to disk. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{ams_8h_a069d8d08ccdd2c7c68a93c816a25a3dd}{az\+\_\+ams1\+\_\+free}} (\mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} $\ast$ams1)
+\begin{DoxyCompactList}\small\item\em frees a \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} struct that was previously loaded with az\+\_\+ams1\+\_\+load(...). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+definitions for the Azathoth Material Specification v1 (A\+M\+S1) 
+
+\begin{DoxyAuthor}{Author}
+Lukas Genkinger (\href{mailto:genkinger@protonmail.com}{\tt genkinger@protonmail.\+com}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2018-\/12-\/30
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2018, Lukas Genkinger, All rights reserved.
+\end{DoxyCopyright}
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met\+:
+
+
+\begin{DoxyEnumerate}
+\item Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+\item Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+\end{DoxyEnumerate}
+
+T\+H\+IS S\+O\+F\+T\+W\+A\+RE IS P\+R\+O\+V\+I\+D\+ED BY T\+HE C\+O\+P\+Y\+R\+I\+G\+HT H\+O\+L\+D\+E\+RS A\+ND C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS \char`\"{}\+A\+S I\+S\char`\"{} A\+ND, A\+NY E\+X\+P\+R\+E\+SS OR I\+M\+P\+L\+I\+ED W\+A\+R\+R\+A\+N\+T\+I\+ES, I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, T\+HE I\+M\+P\+L\+I\+ED, W\+A\+R\+R\+A\+N\+T\+I\+ES OF M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+TY A\+ND F\+I\+T\+N\+E\+SS F\+OR A P\+A\+R\+T\+I\+C\+U\+L\+AR P\+U\+R\+P\+O\+SE A\+RE, D\+I\+S\+C\+L\+A\+I\+M\+ED. IN NO E\+V\+E\+NT S\+H\+A\+LL T\+HE C\+O\+P\+Y\+R\+I\+G\+HT O\+W\+N\+ER OR C\+O\+N\+T\+R\+I\+B\+U\+T\+O\+RS BE L\+I\+A\+B\+LE F\+OR, A\+NY D\+I\+R\+E\+CT, I\+N\+D\+I\+R\+E\+CT, I\+N\+C\+I\+D\+E\+N\+T\+AL, S\+P\+E\+C\+I\+AL, E\+X\+E\+M\+P\+L\+A\+RY, OR C\+O\+N\+S\+E\+Q\+U\+E\+N\+T\+I\+AL D\+A\+M\+A\+G\+ES, (I\+N\+C\+L\+U\+D\+I\+NG, B\+UT N\+OT L\+I\+M\+I\+T\+ED TO, P\+R\+O\+C\+U\+R\+E\+M\+E\+NT OF S\+U\+B\+S\+T\+I\+T\+U\+TE G\+O\+O\+DS OR S\+E\+R\+V\+I\+C\+ES;, L\+O\+SS OF U\+SE, D\+A\+TA, OR P\+R\+O\+F\+I\+TS; OR B\+U\+S\+I\+N\+E\+SS I\+N\+T\+E\+R\+R\+U\+P\+T\+I\+ON) H\+O\+W\+E\+V\+ER C\+A\+U\+S\+ED A\+ND, ON A\+NY T\+H\+E\+O\+RY OF L\+I\+A\+B\+I\+L\+I\+TY, W\+H\+E\+T\+H\+ER IN C\+O\+N\+T\+R\+A\+CT, S\+T\+R\+I\+CT L\+I\+A\+B\+I\+L\+I\+TY, OR T\+O\+RT, (I\+N\+C\+L\+U\+D\+I\+NG N\+E\+G\+L\+I\+G\+E\+N\+CE OR O\+T\+H\+E\+R\+W\+I\+SE) A\+R\+I\+S\+I\+NG IN A\+NY W\+AY O\+UT OF T\+HE U\+SE OF T\+H\+IS, S\+O\+F\+T\+W\+A\+RE, E\+V\+EN IF A\+D\+V\+I\+S\+ED OF T\+HE P\+O\+S\+S\+I\+B\+I\+L\+I\+TY OF S\+U\+CH D\+A\+M\+A\+GE.
+
+The views and conclusions contained in the software and documentation are those, of the authors and should not be interpreted as representing official policies, either expressed or implied, of the Azathoth project. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{ams_8h_a069d8d08ccdd2c7c68a93c816a25a3dd}\label{ams_8h_a069d8d08ccdd2c7c68a93c816a25a3dd}} 
+\index{ams.\+h@{ams.\+h}!az\+\_\+ams1\+\_\+free@{az\+\_\+ams1\+\_\+free}}
+\index{az\+\_\+ams1\+\_\+free@{az\+\_\+ams1\+\_\+free}!ams.\+h@{ams.\+h}}
+\subsubsection{\texorpdfstring{az\+\_\+ams1\+\_\+free()}{az\_ams1\_free()}}
+{\footnotesize\ttfamily void az\+\_\+ams1\+\_\+free (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} $\ast$}]{ams1 }\end{DoxyParamCaption})}
+
+
+
+frees a \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} struct that was previously loaded with az\+\_\+ams1\+\_\+load(...). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ams1} & pointer to \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} struct. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{ams_8h_ad958b6e68e8945a7009a4116cc7a9205}\label{ams_8h_ad958b6e68e8945a7009a4116cc7a9205}} 
+\index{ams.\+h@{ams.\+h}!az\+\_\+ams1\+\_\+load@{az\+\_\+ams1\+\_\+load}}
+\index{az\+\_\+ams1\+\_\+load@{az\+\_\+ams1\+\_\+load}!ams.\+h@{ams.\+h}}
+\subsubsection{\texorpdfstring{az\+\_\+ams1\+\_\+load()}{az\_ams1\_load()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}}$\ast$ az\+\_\+ams1\+\_\+load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+loads a ams1 file from disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path to the ams1 file to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ams1\+\_\+t$\ast$ a pointer to a newly populated \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} struct (free with az\+\_\+ams1\+\_\+free(...) only!). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{ams_8h_aa8979409fae2a063db0ae02a8b8c9075}\label{ams_8h_aa8979409fae2a063db0ae02a8b8c9075}} 
+\index{ams.\+h@{ams.\+h}!az\+\_\+ams1\+\_\+write@{az\+\_\+ams1\+\_\+write}}
+\index{az\+\_\+ams1\+\_\+write@{az\+\_\+ams1\+\_\+write}!ams.\+h@{ams.\+h}}
+\subsubsection{\texorpdfstring{az\+\_\+ams1\+\_\+write()}{az\_ams1\_write()}}
+{\footnotesize\ttfamily void az\+\_\+ams1\+\_\+write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{\mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} $\ast$}]{ams1 }\end{DoxyParamCaption})}
+
+
+
+writes a ams1 file to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path to the new ams1 file. \\
+\hline
+{\em ams1} & pointer to \mbox{\hyperlink{structams1__t}{ams1\+\_\+t}} struct. \\
+\hline
+\end{DoxyParams}
