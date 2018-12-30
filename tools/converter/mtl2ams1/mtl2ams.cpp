@@ -1,5 +1,5 @@
-#include "../../../src/ams.h"
-#include "../strutils.h"
+#include "ams.h"
+#include "strutils.h"
 
 #define KD "Kd "
 #define KA "Ka "

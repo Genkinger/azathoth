@@ -1,5 +1,5 @@
-#include "../../../src/aps.h"
-#include "../strutils.h"
+#include "aps.h"
+#include "strutils.h"
 
 #define V       "v "
 #define VN      "vn "
