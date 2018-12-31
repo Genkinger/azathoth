@@ -1,11 +1,16 @@
 #pragma once
 #include "common.h"
 
+#define LIGHT_POINT 0
+#define LIGHT_DIR 1
+#define LIGHT_SPOT 2
+
 typedef struct
 {
-    float position[3];
-    float color[3];
-    float intensity = 1;
+    float   position[3];
+    float   color[3];
+    float   intensity = 1;
+    int     type;
 } light_t;
 
 typedef struct 

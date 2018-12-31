@@ -4,11 +4,10 @@ layout(location = 0) in vec3 vertex_position;
 layout(location = 2) in vec3 vertex_normal;
 layout(location = 1) in vec2 vertex_uv;
 
-uniform mat4 Model;
-uniform mat4 Normal;
-uniform mat4 View;
-uniform mat4 Projection;
-uniform mat4 MVP;
+uniform mat4 ModelMatrix;
+uniform mat4 NormalMatrix;
+uniform mat4 ViewMatrix;
+uniform mat4 ProjectionMatrix;
 
 uniform vec3 cameraPosition;
 uniform vec3 lightPosition;
@@ -21,10 +20,10 @@ out vec3 specular_col;
 void main()
 {
     vec4 vertex_pos = vec4(vertex_position,1);
-    vec4 pos = Model * vertex_pos;
-    vec4 normal = Normal * vec4(vertex_normal,0);
+    vec4 pos = ModelMatrix * vertex_pos;
+    vec4 normal = NormalMatrix * vec4(vertex_normal,0);
     st = vec2(vertex_uv.x,1-vertex_uv.y);
-    gl_Position = MVP * vertex_pos;
+    gl_Position = ProjectionMatrix * ViewMatrix * ModelMatrix * vertex_pos;
 
     vec3 lightDir = lightPosition-pos.xyz;
     vec3 viewDir = normalize(cameraPosition - pos.xyz);

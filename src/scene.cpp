@@ -11,3 +11,8 @@ void Scene::AddModel(model_t* model)
 {
     models.push_back(model);
 }
+
+void Scene::AddLight(light_t *light)
+{
+    lights.push_back(light);
+}

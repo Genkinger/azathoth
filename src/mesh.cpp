@@ -89,7 +89,7 @@ mesh_t *az_mesh_load_from_aps2(aps2_t *aps2, aps2_group_t *group)
     GLCall(glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,stride,0));
     GLCall(glVertexAttribPointer(1,2,GL_FLOAT,GL_FALSE,stride,(void*)(3 * sizeof(float))));
     GLCall(glVertexAttribPointer(2,3,GL_FLOAT,GL_FALSE,stride,(void*)(5 * sizeof(float))));    
-    mesh->count = group->header.num_faces * (3 + 2 + 3);
+    mesh->count = group->header.num_faces * 3;
     mesh->transform.model = glm::mat4(1);
 
     return mesh;
