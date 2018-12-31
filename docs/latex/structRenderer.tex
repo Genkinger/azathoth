@@ -3,12 +3,72 @@
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structRenderer_aef799e1440c7a490457c969ea1bafea1}\label{structRenderer_aef799e1440c7a490457c969ea1bafea1}} 
-void {\bfseries Draw\+Scene} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{classShader}{Shader}} \&shader, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\mbox{\Hypertarget{structRenderer_af72dee9cedcc9e481dd3d313bac11b62}\label{structRenderer_af72dee9cedcc9e481dd3d313bac11b62}} 
+{\bfseries Renderer} (int width, int height)
+\item 
+\mbox{\Hypertarget{structRenderer_afd52dc77ef5b02e6cc3047a773f51e18}\label{structRenderer_afd52dc77ef5b02e6cc3047a773f51e18}} 
+void {\bfseries Draw\+Scene\+Deferred} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\item 
+\mbox{\Hypertarget{structRenderer_a108d3b7ca0673a352ec4e5280606719e}\label{structRenderer_a108d3b7ca0673a352ec4e5280606719e}} 
+void {\bfseries Draw\+Scene\+Forward} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\item 
+\mbox{\Hypertarget{structRenderer_a3632d18456a6891c573bae960eb726a7}\label{structRenderer_a3632d18456a6891c573bae960eb726a7}} 
+void {\bfseries Init\+G\+Buffer} (int width, int height)
+\item 
+\mbox{\Hypertarget{structRenderer_a70b1d8926675c08e7204c7e9130d202d}\label{structRenderer_a70b1d8926675c08e7204c7e9130d202d}} 
+void {\bfseries Init\+Quad} ()
+\item 
+\mbox{\Hypertarget{structRenderer_ade2c467e62502725e1c36a979f600271}\label{structRenderer_ade2c467e62502725e1c36a979f600271}} 
+void {\bfseries Draw\+Fullscreen\+Quad} ()
+\item 
+\mbox{\Hypertarget{structRenderer_a8588b8e6c8dad28d6420a6f3138294e2}\label{structRenderer_a8588b8e6c8dad28d6420a6f3138294e2}} 
+void {\bfseries Debug\+Light\+Pass} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\item 
+\mbox{\Hypertarget{structRenderer_ad56111d423984eef23ef663996a2cdda}\label{structRenderer_ad56111d423984eef23ef663996a2cdda}} 
+void {\bfseries Light\+Pass} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\item 
+\mbox{\Hypertarget{structRenderer_a98e02ef7093ded2d81755a05ea1c2f15}\label{structRenderer_a98e02ef7093ded2d81755a05ea1c2f15}} 
+void {\bfseries Geometry\+Pass} (\mbox{\hyperlink{structScene}{Scene}} \&scene, \mbox{\hyperlink{structCamera}{Camera}} \&camera)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structRenderer_a22d429c02df9d986bcb3d095dd10c568}\label{structRenderer_a22d429c02df9d986bcb3d095dd10c568}} 
+\mbox{\hyperlink{classShader}{Shader}} $\ast$ {\bfseries geometry}
+\item 
+\mbox{\Hypertarget{structRenderer_a0aaecf6a0dc9d5655f59f6812ed79f65}\label{structRenderer_a0aaecf6a0dc9d5655f59f6812ed79f65}} 
+\mbox{\hyperlink{classShader}{Shader}} $\ast$ {\bfseries lighting}
+\item 
+\mbox{\Hypertarget{structRenderer_a108a2db284d1cfeeaafce15cce3f6050}\label{structRenderer_a108a2db284d1cfeeaafce15cce3f6050}} 
+\mbox{\hyperlink{classShader}{Shader}} $\ast$ {\bfseries forward}
+\item 
+\mbox{\Hypertarget{structRenderer_ad3b4aa29c8645c7a686b9d74fd147b08}\label{structRenderer_ad3b4aa29c8645c7a686b9d74fd147b08}} 
+G\+Luint {\bfseries g\+Buffer}
+\item 
+\mbox{\Hypertarget{structRenderer_a92b8ea66fd0ee7b5739e5c3985c9f008}\label{structRenderer_a92b8ea66fd0ee7b5739e5c3985c9f008}} 
+G\+Luint {\bfseries textures} \mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{structRenderer_a7aeea16ce17f9c53f56d3a8bf1ddaff1}\label{structRenderer_a7aeea16ce17f9c53f56d3a8bf1ddaff1}} 
+G\+Luint {\bfseries depth\+\_\+texture}
+\item 
+\mbox{\Hypertarget{structRenderer_a2ded391feba87f96a49e9953e40d9c49}\label{structRenderer_a2ded391feba87f96a49e9953e40d9c49}} 
+G\+Luint {\bfseries quad\+\_\+vao}
+\item 
+\mbox{\Hypertarget{structRenderer_a674409c91c0c210039fbec7a0820b884}\label{structRenderer_a674409c91c0c210039fbec7a0820b884}} 
+G\+Luint {\bfseries quad\+\_\+vbo}
+\item 
+\mbox{\Hypertarget{structRenderer_a6f9eca105d59d25862cd99dfd73740d6}\label{structRenderer_a6f9eca105d59d25862cd99dfd73740d6}} 
+G\+Luint {\bfseries attachments} \mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{structRenderer_a15d70054c4cc503d73a85adbde3d6e3e}\label{structRenderer_a15d70054c4cc503d73a85adbde3d6e3e}} 
+int {\bfseries width}
+\item 
+\mbox{\Hypertarget{structRenderer_ac5c41bea3debfd191abd29b3aa209960}\label{structRenderer_ac5c41bea3debfd191abd29b3aa209960}} 
+int {\bfseries height}
 \end{DoxyCompactItemize}
 
 
 The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/genkinger/devel/\+C/azathoth/inc/renderer.\+h\item 
+/home/genkinger/devel/\+C/azathoth/inc/\mbox{\hyperlink{renderer_8h}{renderer.\+h}}\item 
 /home/genkinger/devel/\+C/azathoth/src/renderer.\+cpp\end{DoxyCompactItemize}

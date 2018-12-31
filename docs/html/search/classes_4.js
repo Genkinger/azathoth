@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['material_5flib_5ft',['material_lib_t',['../structmaterial__lib__t.html',1,'']]],
-  ['material_5ft',['material_t',['../structmaterial__t.html',1,'']]],
-  ['mesh_5ft',['mesh_t',['../structmesh__t.html',1,'']]],
-  ['model_5ft',['model_t',['../structmodel__t.html',1,'']]]
+  ['light_5fdirectional_5ft',['light_directional_t',['../structlight__directional__t.html',1,'']]],
+  ['light_5fpoint_5ft',['light_point_t',['../structlight__point__t.html',1,'']]],
+  ['light_5fspot_5ft',['light_spot_t',['../structlight__spot__t.html',1,'']]],
+  ['light_5ft',['light_t',['../structlight__t.html',1,'']]]
 ];

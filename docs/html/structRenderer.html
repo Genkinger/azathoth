@@ -65,6 +65,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="structRenderer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Renderer Struct Reference</div>  </div>
@@ -73,9 +74,69 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aef799e1440c7a490457c969ea1bafea1"><td class="memItemLeft" align="right" valign="top"><a id="aef799e1440c7a490457c969ea1bafea1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawScene</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="classShader.html">Shader</a> &amp;shader, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
-<tr class="separator:aef799e1440c7a490457c969ea1bafea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72dee9cedcc9e481dd3d313bac11b62"><td class="memItemLeft" align="right" valign="top"><a id="af72dee9cedcc9e481dd3d313bac11b62"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Renderer</b> (int width, int height)</td></tr>
+<tr class="separator:af72dee9cedcc9e481dd3d313bac11b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd52dc77ef5b02e6cc3047a773f51e18"><td class="memItemLeft" align="right" valign="top"><a id="afd52dc77ef5b02e6cc3047a773f51e18"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawSceneDeferred</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="separator:afd52dc77ef5b02e6cc3047a773f51e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108d3b7ca0673a352ec4e5280606719e"><td class="memItemLeft" align="right" valign="top"><a id="a108d3b7ca0673a352ec4e5280606719e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawSceneForward</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="separator:a108d3b7ca0673a352ec4e5280606719e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3632d18456a6891c573bae960eb726a7"><td class="memItemLeft" align="right" valign="top"><a id="a3632d18456a6891c573bae960eb726a7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitGBuffer</b> (int width, int height)</td></tr>
+<tr class="separator:a3632d18456a6891c573bae960eb726a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70b1d8926675c08e7204c7e9130d202d"><td class="memItemLeft" align="right" valign="top"><a id="a70b1d8926675c08e7204c7e9130d202d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>InitQuad</b> ()</td></tr>
+<tr class="separator:a70b1d8926675c08e7204c7e9130d202d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2c467e62502725e1c36a979f600271"><td class="memItemLeft" align="right" valign="top"><a id="ade2c467e62502725e1c36a979f600271"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawFullscreenQuad</b> ()</td></tr>
+<tr class="separator:ade2c467e62502725e1c36a979f600271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8588b8e6c8dad28d6420a6f3138294e2"><td class="memItemLeft" align="right" valign="top"><a id="a8588b8e6c8dad28d6420a6f3138294e2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DebugLightPass</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="separator:a8588b8e6c8dad28d6420a6f3138294e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad56111d423984eef23ef663996a2cdda"><td class="memItemLeft" align="right" valign="top"><a id="ad56111d423984eef23ef663996a2cdda"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>LightPass</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="separator:ad56111d423984eef23ef663996a2cdda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e02ef7093ded2d81755a05ea1c2f15"><td class="memItemLeft" align="right" valign="top"><a id="a98e02ef7093ded2d81755a05ea1c2f15"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>GeometryPass</b> (<a class="el" href="structScene.html">Scene</a> &amp;scene, <a class="el" href="structCamera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="separator:a98e02ef7093ded2d81755a05ea1c2f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a22d429c02df9d986bcb3d095dd10c568"><td class="memItemLeft" align="right" valign="top"><a id="a22d429c02df9d986bcb3d095dd10c568"></a>
+<a class="el" href="classShader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>geometry</b></td></tr>
+<tr class="separator:a22d429c02df9d986bcb3d095dd10c568"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aaecf6a0dc9d5655f59f6812ed79f65"><td class="memItemLeft" align="right" valign="top"><a id="a0aaecf6a0dc9d5655f59f6812ed79f65"></a>
+<a class="el" href="classShader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lighting</b></td></tr>
+<tr class="separator:a0aaecf6a0dc9d5655f59f6812ed79f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108a2db284d1cfeeaafce15cce3f6050"><td class="memItemLeft" align="right" valign="top"><a id="a108a2db284d1cfeeaafce15cce3f6050"></a>
+<a class="el" href="classShader.html">Shader</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>forward</b></td></tr>
+<tr class="separator:a108a2db284d1cfeeaafce15cce3f6050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3b4aa29c8645c7a686b9d74fd147b08"><td class="memItemLeft" align="right" valign="top"><a id="ad3b4aa29c8645c7a686b9d74fd147b08"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>gBuffer</b></td></tr>
+<tr class="separator:ad3b4aa29c8645c7a686b9d74fd147b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92b8ea66fd0ee7b5739e5c3985c9f008"><td class="memItemLeft" align="right" valign="top"><a id="a92b8ea66fd0ee7b5739e5c3985c9f008"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>textures</b> [4]</td></tr>
+<tr class="separator:a92b8ea66fd0ee7b5739e5c3985c9f008"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aeea16ce17f9c53f56d3a8bf1ddaff1"><td class="memItemLeft" align="right" valign="top"><a id="a7aeea16ce17f9c53f56d3a8bf1ddaff1"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>depth_texture</b></td></tr>
+<tr class="separator:a7aeea16ce17f9c53f56d3a8bf1ddaff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ded391feba87f96a49e9953e40d9c49"><td class="memItemLeft" align="right" valign="top"><a id="a2ded391feba87f96a49e9953e40d9c49"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>quad_vao</b></td></tr>
+<tr class="separator:a2ded391feba87f96a49e9953e40d9c49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a674409c91c0c210039fbec7a0820b884"><td class="memItemLeft" align="right" valign="top"><a id="a674409c91c0c210039fbec7a0820b884"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>quad_vbo</b></td></tr>
+<tr class="separator:a674409c91c0c210039fbec7a0820b884"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f9eca105d59d25862cd99dfd73740d6"><td class="memItemLeft" align="right" valign="top"><a id="a6f9eca105d59d25862cd99dfd73740d6"></a>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>attachments</b> [4]</td></tr>
+<tr class="separator:a6f9eca105d59d25862cd99dfd73740d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15d70054c4cc503d73a85adbde3d6e3e"><td class="memItemLeft" align="right" valign="top"><a id="a15d70054c4cc503d73a85adbde3d6e3e"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>width</b></td></tr>
+<tr class="separator:a15d70054c4cc503d73a85adbde3d6e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5c41bea3debfd191abd29b3aa209960"><td class="memItemLeft" align="right" valign="top"><a id="ac5c41bea3debfd191abd29b3aa209960"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>height</b></td></tr>
+<tr class="separator:ac5c41bea3debfd191abd29b3aa209960"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following files:<ul>
 <li>/home/genkinger/devel/C/azathoth/inc/<a class="el" href="renderer_8h_source.html">renderer.h</a></li>
