@@ -44,7 +44,6 @@ char * strrpl(char const * const original, char const * const pattern, char cons
   }
 }
 
-
 bool    starts_with(const char *prefix, const char* string)
 {
         return !strncmp(prefix,string,strlen(prefix));
