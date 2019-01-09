@@ -1,0 +1,8 @@
+#pragma once
+
+
+namespace Az{
+    class RenderWindow{
+
+    };
+}

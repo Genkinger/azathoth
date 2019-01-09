@@ -43,7 +43,9 @@ struct MTLParser
         while(fgets(line,sizeof(line),file))
         {
             line[strcspn(line,"\n")] = 0;
-            parse_line(line);
+            char *_line = strrpl(line,"\\","/");
+            _line = trim(line);
+            parse_line(_line);
         }      
     }
 

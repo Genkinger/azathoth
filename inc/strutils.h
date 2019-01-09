@@ -35,7 +35,7 @@
  */
 #include <stdlib.h>
 #include <string.h>
-
+#include <ctype.h>
 /**
  * @brief replace parts of a string.
  * 
@@ -55,3 +55,7 @@ char * strrpl(char const * const original, char const * const pattern, char cons
  * @return false otherwise
  */
 bool starts_with(const char *prefix, const char* string);
+
+char *rtrim(const char *s);
+char *ltrim(const char *s);
+char *trim(const char *s);

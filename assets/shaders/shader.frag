@@ -15,5 +15,8 @@ void main()
 {
     vec4 diffuse_color = texture(diffuse_texture,st);
     vec4 ambient_color = texture(ambient_texture,st);
+    if(diffuse_color.a < 0.5){
+        discard;
+    }
     color = scale * cosTheta * diffuse_color + ambient_color;// + vec4(specular_col,1.0);
 }
