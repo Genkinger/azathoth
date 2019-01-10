@@ -44,9 +44,9 @@ namespace Az{
             Vec<T,dim> cross(const Vec<T,dim>& other) const{
                 Vec<T,dim> result;
                 if(mDimension == 3){
-                    result[0] = mElements[2] * other[3] - other[2] * mElements[3];
-                    result[1] = mElements[3] * other[1] - other[3] * mElements[1];
-                    result[2] = mElements[1] * other[2] - other[1] * mElements[2];
+                    result[0] = mElements[1] * other[2] - other[1] * mElements[2];
+                    result[1] = mElements[2] * other[0] - other[2] * mElements[0];
+                    result[2] = mElements[0] * other[1] - other[0] * mElements[1];
                 }else{
                     //TODO: Log this
                 }
