@@ -1,7 +1,8 @@
 #pragma once
 
+
 namespace Az{
-    class Logger{
+    class RenderTarget{
         
     };
 }
