@@ -1,7 +1,12 @@
 #pragma once
 
 namespace Az{
-    class Resource{
 
+    template<typename T>
+    class Resource{
+        T *mResourcePointer;
+        public:
+            Resource(T* resource_pointer): mResourcePointer(resource_pointer){}
+            ~Resource(){}    
     };
 }

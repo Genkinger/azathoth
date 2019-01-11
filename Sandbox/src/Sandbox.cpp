@@ -14,7 +14,17 @@ class Sandbox : public Az::Application{
             delete mFileSink;
         }
         void Run(){
-           mLogger.Critical("Now starting the app...");
+            mLogger.Critical("Now starting the app...");
+            auto vfs = Az::Vfs();
+            vfs.Mount("/home/genkinger","/");
+            vfs.Mount("/home/genkinger/downloads","/test");
+            vfs.Mount("/home","/");
+            auto full = vfs.ResolvePath("/.bashrc");
+            auto full2 = vfs.ResolvePath("/test/.bashrc");
+            mLogger.Info("Found /.bashrc -> "+full[0]);
+            mLogger.Info("Found /test/.bashrc -> "+full2[0]);
+            
+            
         }
 };
 

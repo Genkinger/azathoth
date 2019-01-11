@@ -11,6 +11,7 @@
 #include "AzRenderWindow.hpp"
 #include "AzResourceManager.hpp"
 #include "AzResource.hpp"
+#include "AzVfs.hpp"
 
 #include "math/AzMath.hpp"
 

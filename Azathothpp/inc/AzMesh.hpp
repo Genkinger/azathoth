@@ -3,7 +3,7 @@
 
 
 namespace Az{
-    class Mesh : public Resource{
+    class Mesh{
 
     };
 
