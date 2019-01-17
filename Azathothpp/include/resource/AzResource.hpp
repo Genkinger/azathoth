@@ -7,6 +7,7 @@ namespace Az{
         T *mResourcePointer;
         public:
             Resource(T* resource_pointer): mResourcePointer(resource_pointer){}
+            T* Get(){ return mResourcePointer; }
             ~Resource(){}    
     };
 }

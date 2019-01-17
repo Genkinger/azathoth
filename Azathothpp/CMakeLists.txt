@@ -1,6 +1,6 @@
 project(Azathothpp)
 
-include_directories(inc ../Contrib/glad/include)
+include_directories(include ${CMAKE_SOURCE_DIR}/Contrib/glad/include)
 
 file(GLOB_RECURSE SOURCES_FULL "src/*.cpp")
 add_library(${PROJECT_NAME} SHARED ${SOURCES_FULL})
