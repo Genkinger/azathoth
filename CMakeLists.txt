@@ -6,6 +6,7 @@ set(CMAKE_BUILD_TYPE Debug)
 add_subdirectory(Azathoth)
 add_subdirectory(Azathothpp)
 add_subdirectory(Sandbox)
+add_subdirectory(Contrib/glad)
 
 
 

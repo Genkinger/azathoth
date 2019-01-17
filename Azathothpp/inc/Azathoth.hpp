@@ -1,18 +1,31 @@
 #pragma once
 
-#include "AzApplication.hpp"
-#include "AzDebug.hpp"
+#include "application/AzApplication.hpp"
+#include "application/AzDebug.hpp"
+
 #include "event/AzEvent.hpp"
-#include "AzImage.hpp"
+#include "event/AzKeyboardEvent.hpp"
+#include "event/AzEventDispatcher.hpp"
+#include "event/AzEventType.hpp"
+
 #include "log/AzLogger.hpp"
 #include "log/AzLoggerConsoleSink.hpp"
 #include "log/AzLoggerFileSink.hpp"
-#include "AzMesh.hpp"
+
+#include "resource/AzImage.hpp"
+#include "resource/AzMesh.hpp"
 #include "AzRenderWindow.hpp"
-#include "AzResourceManager.hpp"
-#include "AzResource.hpp"
-#include "AzVfs.hpp"
+#include "resource/AzResourceManager.hpp"
+#include "resource/AzResource.hpp"
+
+#include "system/AzVfs.hpp"
+#include "system/AzFilesystem.hpp"
+
+#include "AzRenderWindow.hpp"
+#include "AzRenderTarget.hpp"
 
 #include "math/AzMath.hpp"
+#include "math/AzMat.hpp"
+#include "math/AzVec.hpp"
 
-#include "AzEntryPoint.hpp"
+#include "application/AzEntryPoint.hpp"

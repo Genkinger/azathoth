@@ -4,27 +4,30 @@
 
 class Sandbox : public Az::Application{
         Az::LoggerFileSink *mFileSink;
+        Az::RenderWindow   *mRenderWindow;
     public:
         Sandbox(int argc, char **argv): Application(argc,argv), mFileSink(){
             mFileSink = new Az::LoggerFileSink("FileSink");
             mLogger.AttachSink(mFileSink);
+
+            mRenderWindow = new Az::RenderWindow(800,600,"Sandbox");
         }
+
         ~Sandbox(){
             mLogger.Info("Shutting down ... Bye!");
             delete mFileSink;
+            delete mRenderWindow;
         }
+
         void Run(){
             mLogger.Critical("Now starting the app...");
-            auto vfs = Az::Vfs();
-            vfs.Mount("/home/genkinger","/");
-            vfs.Mount("/home/genkinger/downloads","/test");
-            vfs.Mount("/home","/");
-            auto full = vfs.ResolvePath("/.bashrc");
-            auto full2 = vfs.ResolvePath("/test/.bashrc");
-            mLogger.Info("Found /.bashrc -> "+full[0]);
-            mLogger.Info("Found /test/.bashrc -> "+full2[0]);
-            
-            
+            glClearColor(1,0,0,1);
+
+            while(!mRenderWindow->ShouldClose()){
+                mRenderWindow->Update();
+                mRenderWindow->Clear();
+                mRenderWindow->SwapBuffers();
+            }
         }
 };
 

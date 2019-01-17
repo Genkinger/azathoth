@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "AzFsUtils.hpp"
+#include "AzFilesystem.hpp"
 
 namespace Az{
     class Vfs{
