@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/mtl2ams.dir/src/mtl2ams.cpp.o CMakeFiles/mtl2ams.dir/__/__/__/Azathoth/src/ams.cpp.o CMakeFiles/mtl2ams.dir/__/__/__/Azathoth/src/strutils.cpp.o  -o mtl2ams 

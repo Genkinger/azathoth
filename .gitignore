@@ -41,7 +41,7 @@
 .vscode
 
 # build folder
-build
+#build
 
 # Media
 #*.png

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/obj2aps2.dir/src/obj2aps.cpp.o CMakeFiles/obj2aps2.dir/src/objparser.cpp.o CMakeFiles/obj2aps2.dir/__/__/__/Azathoth/src/aps.cpp.o CMakeFiles/obj2aps2.dir/__/__/__/Azathoth/src/strutils.cpp.o  -o obj2aps2 

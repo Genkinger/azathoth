@@ -1,0 +1,182 @@
+[
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/ams.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/ams.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/ams.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/aps.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/aps.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/aps.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/camera.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/camera.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/camera.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/farbfeld.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/farbfeld.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/farbfeld.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/glcall.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/glcall.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/glcall.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/input.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/input.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/input.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/main.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/main.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/main.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/material.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/material.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/material.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/mesh.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/mesh.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/mesh.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/model.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/model.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/model.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/renderer.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/renderer.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/renderer.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/scene.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/scene.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/scene.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/shader.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/shader.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/shader.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/strutils.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/texture.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/texture.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/texture.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathoth",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/Azathoth.dir/src/window.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/window.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/window.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/AzApplication.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/AzApplication.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/AzApplication.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/AzLogger.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/AzLogger.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/AzLogger.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/AzRenderTarget.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/AzRenderTarget.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/AzRenderTarget.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/AzRenderWindow.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/AzRenderWindow.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/AzRenderWindow.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/AzString.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/AzString.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/AzString.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/resource/AzResourceManager.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/resource/AzResourceManager.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/resource/AzResourceManager.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/resource/loader/AzAMS.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzAMS.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzAMS.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/resource/loader/AzAPS.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzAPS.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzAPS.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/resource/loader/AzFarbfeld.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzFarbfeld.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/resource/loader/AzFarbfeld.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/system/AzFilesystem.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/system/AzFilesystem.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/system/AzFilesystem.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Azathothpp",
+  "command": "/usr/bin/g++  -DAzathothpp_EXPORTS -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g -fPIC   -std=gnu++14 -o CMakeFiles/Azathothpp.dir/src/system/AzVfs.cpp.o -c /home/genkinger/devel/azathoth/Azathothpp/src/system/AzVfs.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathothpp/src/system/AzVfs.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Sandbox",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Sandbox/include -I/home/genkinger/devel/azathoth/Azathothpp/include -I/home/genkinger/devel/azathoth/Contrib/glad/include  -g   -std=gnu++14 -o CMakeFiles/Sandbox.dir/src/Sandbox.cpp.o -c /home/genkinger/devel/azathoth/Sandbox/src/Sandbox.cpp",
+  "file": "/home/genkinger/devel/azathoth/Sandbox/src/Sandbox.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Contrib/glad",
+  "command": "/usr/bin/gcc  -I/home/genkinger/devel/azathoth/Contrib/glad/include  -fpic -g   -o CMakeFiles/glad.dir/src/glad.c.o   -c /home/genkinger/devel/azathoth/Contrib/glad/src/glad.c",
+  "file": "/home/genkinger/devel/azathoth/Contrib/glad/src/glad.c"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/mtl2ams",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/mtl2ams.dir/src/mtl2ams.cpp.o -c /home/genkinger/devel/azathoth/Tools/Conversion/mtl2ams/src/mtl2ams.cpp",
+  "file": "/home/genkinger/devel/azathoth/Tools/Conversion/mtl2ams/src/mtl2ams.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/mtl2ams",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/mtl2ams.dir/__/__/__/Azathoth/src/ams.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/ams.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/ams.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/mtl2ams",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/mtl2ams.dir/__/__/__/Azathoth/src/strutils.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/obj2aps2",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/include -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/obj2aps2.dir/src/obj2aps.cpp.o -c /home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/src/obj2aps.cpp",
+  "file": "/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/src/obj2aps.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/obj2aps2",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/include -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/obj2aps2.dir/src/objparser.cpp.o -c /home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/src/objparser.cpp",
+  "file": "/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/src/objparser.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/obj2aps2",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/include -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/obj2aps2.dir/__/__/__/Azathoth/src/aps.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/aps.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/aps.cpp"
+},
+{
+  "directory": "/home/genkinger/devel/azathoth/build/Tools/Conversion/obj2aps2",
+  "command": "/usr/bin/g++   -I/home/genkinger/devel/azathoth/Tools/Conversion/obj2aps2/include -I/home/genkinger/devel/azathoth/Azathoth/include  -g   -std=gnu++14 -o CMakeFiles/obj2aps2.dir/__/__/__/Azathoth/src/strutils.cpp.o -c /home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp",
+  "file": "/home/genkinger/devel/azathoth/Azathoth/src/strutils.cpp"
+}
+]

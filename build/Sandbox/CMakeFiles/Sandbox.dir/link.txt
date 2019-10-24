@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/Sandbox.dir/src/Sandbox.cpp.o  -o Sandbox -Wl,-rpath,/home/genkinger/devel/azathoth/build/Azathothpp ../Azathothpp/libAzathothpp.so -lglfw ../Contrib/glad/libglad.a -lGL 
