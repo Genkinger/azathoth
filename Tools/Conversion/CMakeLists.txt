@@ -1,0 +1,2 @@
+add_subdirectory(mtl2ams)
+add_subdirectory(obj2aps2)

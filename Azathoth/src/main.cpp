@@ -15,9 +15,9 @@ int main(int argc, char** argv)
 	Window window(W, H, "OpenGL");
 	Input input(window);
 
-	Shader shader("../assets/shaders/shader.vert", "../assets/shaders/shader.frag");
-	Shader geometry("../assets/shaders/deferred/geometry.vert","../assets/shaders/deferred/geometry.frag");
-	Shader lighting("../assets/shaders/deferred/lighting.vert","../assets/shaders/deferred/lighting.frag");
+	Shader shader("shader.vert", "shader.frag");
+	//Shader geometry("../assets/shaders/deferred/geometry.vert","../assets/shaders/deferred/geometry.frag");
+	//Shader lighting("../assets/shaders/deferred/lighting.vert","../assets/shaders/deferred/lighting.frag");
 	model_t *a = az_model_aps2_load(argv[1]);
 
 	Camera cam(input, float(W)/H);
@@ -31,8 +31,8 @@ int main(int argc, char** argv)
 	Scene scene;
 	scene.AddModel(a);
 	Renderer renderer = Renderer(W,H);
-	renderer.lighting = &lighting;
-	renderer.geometry = &geometry;
+	//renderer.lighting = &lighting;
+	//renderer.geometry = &geometry;
 	renderer.forward = &shader;
 
 	while(!window.ShouldClose())

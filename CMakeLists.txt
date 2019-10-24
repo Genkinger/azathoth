@@ -7,6 +7,7 @@ add_subdirectory(Azathoth)
 add_subdirectory(Azathothpp)
 add_subdirectory(Sandbox)
 add_subdirectory(Contrib/glad)
+add_subdirectory(Tools/Conversion)
 
 
 
